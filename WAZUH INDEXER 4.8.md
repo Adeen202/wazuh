@@ -1,34 +1,8 @@
-﻿
+# WAZUH INDEXER
 
+## 1.  OVERVIEW OF TERMS
 
-
-
-**WAZUH INDEXER** 
-
-**By: Adeen Mumtaz**
-**
-
-
-**Table of Contents**
-
-|**1.	OVERVIEW OF TERMS .........................................................................................................**|3|
-| :- | -: |
-|**2.	CERTIFICATES CREATION..................................................................................................**|**3** |
-|**3.	NODES INSTALLATION......................................................................................................**|**4**|
-|**4.	INSTALLING THE WAZUH INDEXER...................................................................................**|**12**|
-|**5. 	CONFIGURING THE WAZUH INDEXER……………………...........................................................**|**16**|
-|**6.	DEPLOYING CERTIFICATES.................................................................................................**|**23**|
-|**7. 	MEMORY LOCKING .............................................................................................................**|**35**|
-|**8.           STARTING THE SERVICE .....................................................................................................**||
-|**9.           CLUSTER INITIALIZATION....................................................................................................**||
-
-1. **OVERVIEW OF TERMS**
-
-Wazuh Indexer is the backend where all the logs are stored.
-
-The graylog gets the logs from wazuh indexer to check them.
-
-All logs from PC, Router, firewall will be sent to wazuh dashboard from the graylog to indexer.
+Wazuh Indexer is the backend where all the logs are stored.The graylog gets the logs from wazuh indexer to check them.All logs from PC, Router, firewall will be sent to wazuh dashboard from the graylog to indexer.
 
 **Master Node**: the server or pc having wazuh server  is considered the master node. Master node looks after other nodes, assigns new nodes and perform any other functions. If master node is missing the indexer won’t be able to work properly.
 
@@ -46,7 +20,7 @@ Its always better to have a new index name for each day so we can refer to it ea
 
 **Shards:** one index may have many shards
 
-1. **CERTIFICATES CREATION**
+## 2. CERTIFICATES CREATION
 
 Download the Wazuh installation assistant and the configuration file.
 
@@ -74,7 +48,7 @@ Remove the other files and keep only the tar file
 
 Copy the wazuh-certificates.tar file to all the nodes, including the Wazuh indexer, Wazuh server, and Wazuh dashboard nodes.
 
-1. **NODES INSTALLATION**
+## 3. NODES INSTALLATION
 
 Installaing package
 
@@ -106,13 +80,13 @@ Updating the packages information.
 
 ![](Aspose.Words.c2d542f7-264c-478c-81f6-ce617acbf394.010.png)
 
-1. **INSTALLING THE WAZUH INDEXER**
+## 4. INSTALLING THE WAZUH INDEXER
 
 Install the Wazuh indexer package.
 
 ![](Aspose.Words.c2d542f7-264c-478c-81f6-ce617acbf394.011.png)
 
-1. **CONFIGURING THE WAZUH INDEXER**
+## 5. CONFIGURING THE WAZUH INDEXER
 
 Navigate to /etc/wazuh-indexer/
 
