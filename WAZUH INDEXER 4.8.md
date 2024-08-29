@@ -138,7 +138,7 @@ Changing max local storage to 1 as there is single node we are using.
 
 Save and exit.
 
-1. **DEPLOYING CERTIFICATES**
+## 5. DEPLOYING CERTIFICATES
 
 Run the following commands replacing <indexer-node-name> with the name of the Wazuh indexer node you are configuring as defined in config.yml. *Ubuntu0* for our case. Make a certs directory using command
 
@@ -170,7 +170,7 @@ Changing permissions of directories and certs
 
 Recommended action: If no other Wazuh components are going to be installed on this node, remove the **wazuh-certificates.tar** file by running **rm -f ./wazuh-certificates.tar** to increase security.
 
-1. **MEMORY LOCKING**
+## 6. MEMORY LOCKING
 
 A good practice is that to allocate half the memory to the indexer
 
@@ -214,7 +214,7 @@ Lets edit the jvm.options file and allocate 2 gigs (1.9 was what I decided earli
 ![Aspose Words c2d542f7-264c-478c-81f6-ce617acbf394 029](https://github.com/user-attachments/assets/c0facae6-84f2-462e-92ff-3b9730cdb188)
 
 
-1. **STARTING THE SERVICE**
+## 7. STARTING THE SERVICE
 
 Enable and start the Wazuh indexer service.
 
@@ -227,7 +227,7 @@ Enable and start the Wazuh indexer service.
 ![Aspose Words c2d542f7-264c-478c-81f6-ce617acbf394 030](https://github.com/user-attachments/assets/23cc8c5a-7d24-49da-9ab0-fa7142b846c1)
 
 
-1. **CLUSTER INITIALIZATION**
+## 8. CLUSTER INITIALIZATION
 
 Run the Wazuh indexer indexer-security-init.sh script on any Wazuh indexer node to load the new certificates information and start the single-node or multi-node cluster.
 
