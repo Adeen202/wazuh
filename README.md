@@ -1,2 +1,2 @@
-# wazuh
-wazuh setup, configuration and integration
+# Wazuh-SIEM
+Wazuh setup, configuration and integration
